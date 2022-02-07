@@ -6,7 +6,7 @@ process chunk {
 	tuple stdout, file("*.chunk.*.txt") into chunks
 	file "*.chunks.log"
 
-	publishDir "results/logs", pattern: "*.chunks.log", mode: "move"
+	publishDir "${params.out}/results/logs", pattern: "*.chunks.log", mode: "move"
 
 	"""
 	n_chrom=`bcftools index --threads ${task.cpus} -s ${sites_vcf} | wc -l`
@@ -70,7 +70,7 @@ process impute_chunks {
 	tuple val(chrom), val("${study_vcf.getBaseName()}"), file("*.imputed.bcf") into imputed
 	file "*.imputed.log"
 
-	publishDir "results/logs", pattern: "*.imputed.log", mode: "copy"
+	publishDir "${params.out}/results/logs", pattern: "*.imputed.log", mode: "copy"
 	
 	"""
 	id=`head -n1 ${chunk} | cut -f1`
@@ -93,8 +93,8 @@ process ligate_chunks {
 	tuple val(base_name), file("${chrom}.${base_name}.imputed.bcf"), file("${chrom}.${base_name}.imputed.bcf.csi") into ligated_vcfs
 	file "${chrom}.${base_name}.ligate.log"
 
-	publishDir "results", pattern: "${chrom}.${base_name}.imputed.bcf*", enabled: !params.concatenate, mode: "copy"
-	publishDir "results/logs", pattern: "*.ligate.log", mode: "copy"
+	publishDir "${params.out}/results", pattern: "${chrom}.${base_name}.imputed.bcf*", enabled: !params.concatenate, mode: "copy"
+	publishDir "${params.out}/results/logs", pattern: "*.ligate.log", mode: "copy"
 
 	"""
 	for f in ${imputed_vcf}; do bcftools index \${f}; done
@@ -118,7 +118,7 @@ process concat_chroms {
 	output:
 	set file("${base_name}.imputed.bcf"), file("${base_name}.imputed.bcf.csi")
 
-	publishDir "results", mode: "copy"
+	publishDir "${params.out}/results", mode: "copy"
 
 	"""
 	for f in ${imputed_vcf}; do echo \${f}; done | sort -V > files.txt
