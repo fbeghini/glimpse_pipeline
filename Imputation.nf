@@ -1,13 +1,6 @@
-Channel
-    .fromPath( params.study_vcf )
-    .ifEmpty { error "Cannot find any VCF in ${params.study_vcf}"  }
-    .tap { study_vcf }
-	.map{ vcf -> [ vcf, vcf + ".csi" ] }
-	.tap { sites_vcf_index }
-
 process chunk {
 	input:
-	set file(sites_vcf), file(sites_vcf_index) from sites_vcf_index
+	set file(sites_vcf), file(sites_vcf_index) from Channel.fromPath(params.reference_sites_vcfs).map{ vcf -> [ vcf, vcf + ".csi" ] }
 
 	output:
 	tuple stdout, file("*.chunk.*.txt") into chunks
@@ -32,7 +25,7 @@ process chunk {
 
 process reference_by_chrom {
 	input:
-	set file(vcf), file(vcf_index) from sites_vcf_index
+	set file(vcf), file(vcf_index) from Channel.fromPath(params.reference_vcfs).map{ vcf -> [ vcf, vcf + ".csi" ] }
 
 	output:
 	tuple stdout, file(vcf), file(vcf_index) into references
@@ -51,7 +44,7 @@ process reference_by_chrom {
 
 process study_by_chrom {
 	input:
-	set file(vcf), file(vcf_index) from study_vcf.map{ vcf -> [ vcf, vcf + ".tbi" ] }
+	set file(vcf), file(vcf_index) from Channel.fromPath(params.study_vcf).map{ vcf -> [ vcf, vcf + ".tbi" ] }
 
 	output:
 	tuple stdout, file(vcf), file(vcf_index) into study
