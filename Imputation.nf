@@ -1,11 +1,13 @@
-
+Channel
+    .fromPath( params.study_vcf )
+    .ifEmpty { error "Cannot find any VCF in ${params.study_vcf}"  }
+    .tap { study_vcf }
+	.map{ vcf -> [ vcf, vcf + ".csi" ] }
+	.tap { sites_vcf_index }
 
 process chunk {
-	executor "local"
-	cpus 1
-
 	input:
-	set file(sites_vcf), file(sites_vcf_index) from Channel.fromPath(params.reference_sites_vcfs).map{ vcf -> [ vcf, vcf + ".csi" ] }
+	set file(sites_vcf), file(sites_vcf_index) from sites_vcf_index
 
 	output:
 	tuple stdout, file("*.chunk.*.txt") into chunks
@@ -14,14 +16,14 @@ process chunk {
 	publishDir "results/logs", pattern: "*.chunks.log", mode: "move"
 
 	"""
-	n_chrom=`bcftools index -s ${sites_vcf} | wc -l`
+	n_chrom=`bcftools index --threads ${task.cpus} -s ${sites_vcf} | wc -l`
 	if [[ \${n_chrom} -gt 1 ]]; then
 		echo "Multiple chromosomes within one reference panel VCF are not allowed." 1>&2
 		exit 1
 	fi
-	chrom=`bcftools index -s ${sites_vcf} | cut -f1`
+	chrom=`bcftools index --threads ${task.cpus} -s ${sites_vcf} | cut -f1`
 
- 	${params.chunk_exec} --input ${sites_vcf} --region \${chrom} --window-size ${params.window_size} --buffer-size ${params.buffer_size} --output \${chrom}.chunks.txt > \${chrom}.chunks.log
+ 	${params.chunk_exec} --threads ${task.cpus} --input ${sites_vcf} --region \${chrom} --window-size ${params.window_size} --buffer-size ${params.buffer_size} --output \${chrom}.chunks.txt > \${chrom}.chunks.log
 	split -l 1 -d --additional-suffix=.txt \${chrom}.chunks.txt \${chrom}.chunk.
 	printf "\${chrom}"
 	"""	
@@ -29,33 +31,27 @@ process chunk {
 
 
 process reference_by_chrom {
-	executor "local"
-	cpus 1
-
 	input:
-	set file(vcf), file(vcf_index) from Channel.fromPath(params.reference_vcfs).map{ vcf -> [ vcf, vcf + ".csi" ] }
+	set file(vcf), file(vcf_index) from sites_vcf_index
 
 	output:
 	tuple stdout, file(vcf), file(vcf_index) into references
 
 	"""
-	n_chrom=`bcftools index -s ${vcf} | wc -l`
+	n_chrom=`bcftools index --threads ${task.cpus} -s ${vcf} | wc -l`
 	if [[ \${n_chrom} -gt 1 ]]; then
 		echo "Multiple chromosomes within one reference panel VCF are not allowed." 1>&2
 		exit 1
 	fi
-	chrom=`bcftools index -s ${vcf} | cut -f1`
+	chrom=`bcftools index --threads ${task.cpus} -s ${vcf} | cut -f1`
 	printf "\${chrom}"
 	"""
 }
 
 
 process study_by_chrom {
-	executor "local"
-	cpus 1
-
 	input:
-	set file(vcf), file(vcf_index) from Channel.fromPath(params.study_vcf).map{ vcf -> [ vcf, vcf + ".tbi" ] }
+	set file(vcf), file(vcf_index) from study_vcf.map{ vcf -> [ vcf, vcf + ".tbi" ] }
 
 	output:
 	tuple stdout, file(vcf), file(vcf_index) into study
@@ -73,8 +69,7 @@ study = study.flatMap { chroms, vcf, vcf_index -> chroms.split(',').collect { [i
 process impute_chunks {
 	errorStrategy "retry"
 	maxRetries 3
-	cpus 1
-			
+		
 	input:
 	set val(chrom), file(study_vcf), file(study_vcf_index), file(chunk), file(ref_vcf), file(ref_vcf_index) from study.combine(chunks, by: 0)
 
@@ -89,7 +84,7 @@ process impute_chunks {
 	irg=`head -n1 ${chunk} | cut -f3`
 	org=`head -n1 ${chunk} | cut -f4`
 	chrom_no_prefix=`echo "${chrom}" | sed "s/chr//"`
-	${params.phase_exec} --input ${study_vcf} --reference ${ref_vcf} --map ${params.glimpse_maps}chr\${chrom_no_prefix}.b37.gmap.gz --input-region \${irg} --output-region \${org} --output ${chrom}.\${id}.${study_vcf.getBaseName()}.imputed.bcf --log ${chrom}.\${id}.${study_vcf.getBaseName()}.imputed.log
+	${params.phase_exec} --threads ${task.cpus} --input ${study_vcf} --reference ${ref_vcf} --map ${params.glimpse_maps}chr\${chrom_no_prefix}.b37.gmap.gz --input-region \${irg} --output-region \${org} --output ${chrom}.\${id}.${study_vcf.getBaseName()}.imputed.bcf --log ${chrom}.\${id}.${study_vcf.getBaseName()}.imputed.log
 	"""
 }
 
@@ -97,8 +92,7 @@ process impute_chunks {
 process ligate_chunks {
 	errorStrategy "retry"
 	maxRetries 3
-	cpus 1
-	
+
 	input:
 	set val(chrom), val(base_name), file(imputed_vcf) from imputed.groupTuple(by: [0, 1])
 
@@ -112,8 +106,8 @@ process ligate_chunks {
 	"""
 	for f in ${imputed_vcf}; do bcftools index \${f}; done
 	for f in ${imputed_vcf}; do echo "\${f}"; done | sort -V > files_list.txt
-	${params.ligate_exec} --input files_list.txt --output ${chrom}.${base_name}.imputed.bcf --log ${chrom}.${base_name}.ligate.log
-	bcftools index ${chrom}.${base_name}.imputed.bcf
+	${params.ligate_exec} --threads ${task.cpus} --input files_list.txt --output ${chrom}.${base_name}.imputed.bcf --log ${chrom}.${base_name}.ligate.log
+	bcftools index --threads ${task.cpus} ${chrom}.${base_name}.imputed.bcf
 	"""
 }
 
@@ -121,7 +115,6 @@ process ligate_chunks {
 process concat_chroms {
 	errorStrategy "retry"
 	maxRetries 3
-	cpus 1
 
 	when:
 	params.concatenate
