@@ -16,7 +16,7 @@ process chunk {
 	fi
 	chrom=`bcftools index --threads ${task.cpus} -s ${sites_vcf} | cut -f1`
 
- 	${params.chunk_exec} --threads ${task.cpus} --input ${sites_vcf} --region \${chrom} --window-size ${params.window_size} --buffer-size ${params.buffer_size} --output \${chrom}.chunks.txt > \${chrom}.chunks.log
+ 	GLIMPSE_chunk --threads ${task.cpus} --input ${sites_vcf} --region \${chrom} --window-size ${params.window_size} --buffer-size ${params.buffer_size} --output \${chrom}.chunks.txt > \${chrom}.chunks.log
 	split -l 1 -d --additional-suffix=.txt \${chrom}.chunks.txt \${chrom}.chunk.
 	printf "\${chrom}"
 	"""	
@@ -77,7 +77,7 @@ process impute_chunks {
 	irg=`head -n1 ${chunk} | cut -f3`
 	org=`head -n1 ${chunk} | cut -f4`
 	chrom_no_prefix=`echo "${chrom}" | sed "s/chr//"`
-	${params.phase_exec} --threads ${task.cpus} --input ${study_vcf} --reference ${ref_vcf} --map ${params.glimpse_maps}chr\${chrom_no_prefix}.b37.gmap.gz --input-region \${irg} --output-region \${org} --output ${chrom}.\${id}.${study_vcf.getBaseName()}.imputed.bcf --log ${chrom}.\${id}.${study_vcf.getBaseName()}.imputed.log
+	GLIMPSE_phase --threads ${task.cpus} --input ${study_vcf} --reference ${ref_vcf} --map ${params.glimpse_maps}chr\${chrom_no_prefix}.b37.gmap.gz --input-region \${irg} --output-region \${org} --output ${chrom}.\${id}.${study_vcf.getBaseName()}.imputed.bcf --log ${chrom}.\${id}.${study_vcf.getBaseName()}.imputed.log
 	"""
 }
 
@@ -99,7 +99,7 @@ process ligate_chunks {
 	"""
 	for f in ${imputed_vcf}; do bcftools index \${f}; done
 	for f in ${imputed_vcf}; do echo "\${f}"; done | sort -V > files_list.txt
-	${params.ligate_exec} --threads ${task.cpus} --input files_list.txt --output ${chrom}.${base_name}.imputed.bcf --log ${chrom}.${base_name}.ligate.log
+	GLIMPSE_ligate --threads ${task.cpus} --input files_list.txt --output ${chrom}.${base_name}.imputed.bcf --log ${chrom}.${base_name}.ligate.log
 	bcftools index --threads ${task.cpus} ${chrom}.${base_name}.imputed.bcf
 	"""
 }
