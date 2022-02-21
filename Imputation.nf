@@ -1,17 +1,30 @@
-process mpileup {
+// bcftools query -f'%CHROM\t%POS\t%REF,%ALT\n' {} | bgzip -c > {}.tsv.gz
+// tabix -s1 -b2 -e2 reference_panel/1000GP.chr22.noNA12878.sites.tsv.gz
+
+process genotype_likelihood {
 	input:
-	file(sam_file) from Channel.fromPath(params.sam_files)
+		file(sam_file) from Channel.fromPath(params.reference_sites_vcfs)
 
-	output:
-	file '*.mpileup.log'
-
-	publishDir "${params.out}/results/logs", pattern: "*.mpileup.log", mode: "move"
-
-	"""
-	bcftools mpileup -f ${params.reference_genome} -I -E -a 'FORMAT/DP' -T ${sam_file}.vcf ${sam_file} -Ou | bcftools call -Aim -C alleles -T ${sam_file}.tsv -Oz -o ${sam_file}.bam
-	bcftools index -f ${bamout}
-	"""
+		script:
+		"""
+		echo $sam_file
+		"""
 }
+
+// process mpileup {
+// 	input:
+// 	file(sam_file) from Channel.fromPath(params.sam_files)
+
+// 	output:
+// 	file '*.mpileup.log'
+
+// 	publishDir "${params.out}/results/logs", pattern: "*.mpileup.log", mode: "move"
+
+// 	"""
+// 	bcftools mpileup -f ${params.reference_genome} -I -E -a 'FORMAT/DP' -T ${sam_file}.vcf ${sam_file} -Ou | bcftools call -Aim -C alleles -T ${sam_file}.tsv -Oz -o ${sam_file}.bam
+// 	bcftools index -f ${sam_file}.bam
+// 	"""
+// }
 
 
 // val chromosome from 1..22
