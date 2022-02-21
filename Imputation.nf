@@ -1,6 +1,6 @@
 process mpileup {
 	input:
-	set file(sam_file) from Channel.fromPath(params.sam_files)
+	file(sam_file) from Channel.fromPath(params.sam_files)
 
 	output:
 	file "*.bam" into bamout
@@ -10,7 +10,7 @@ process mpileup {
 
 	publishDir "${params.out}/results/logs", pattern: "*.mpileup.log", mode: "move"
 
-	""""
+	"""
 	bcftools mpileup -f ${params.reference_genome} -I -E -a 'FORMAT/DP' -T ${vcfout} ${sam_file} -Ou | bcftools call -Aim -C alleles -T ${tsvout} -Oz -o ${bamout}
 	bcftools index -f ${bamout}
 	"""
