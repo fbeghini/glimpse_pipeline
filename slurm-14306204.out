@@ -1,0 +1,2248 @@
+
+The following have been reloaded with a version change:
+  1) miniconda/4.9.2 => miniconda/4.11.0
+
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda deactivate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+N E X T F L O W  ~  version 21.10.0
+Launching `Imputation.nf` [friendly_carlsson] - revision: 353bac92b8
+[-        ] process > chunk              -
+[-        ] process > study_by_chrom     -
+[-        ] process > reference_by_chrom -
+
+[-        ] process > chunk              -
+[-        ] process > study_by_chrom     -
+[-        ] process > reference_by_chrom -
+[-        ] process > impute_chunks      -
+[-        ] process > ligate_chunks      -
+[-        ] process > concat_chroms      -
+
+[-        ] process > chunk                  -
+[5e/e71dbd] process > study_by_chrom (3)     [100%] 3 of 3, cached: 3
+[82/abe380] process > reference_by_chrom (3) [100%] 3 of 3, cached: 3
+[-        ] process > impute_chunks          -
+[-        ] process > ligate_chunks          -
+[-        ] process > concat_chroms          -
+
+[-        ] process > chunk                   -
+[35/c70bae] process > study_by_chrom (8)      [100%] 8 of 8, cached: 8
+[53/f59096] process > reference_by_chrom (10) [100%] 11 of 11, cached: 11
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+[-        ] process > chunk                   [  0%] 0 of 2
+[07/6a85ee] process > study_by_chrom (12)     [100%] 12 of 12, cached: 12
+[f9/6adf2c] process > reference_by_chrom (15) [100%] 15 of 15, cached: 15
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+[-        ] process > chunk                   [  0%] 0 of 3
+[63/ac6b95] process > study_by_chrom (21)     [100%] 20 of 20, cached: 20
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+[-        ] process > chunk                   [  0%] 0 of 5
+[d5/e4a2d3] process > study_by_chrom (32)     [100%] 32 of 32, cached: 32
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (1)
+[06/5d915b] process > chunk (2)               [  0%] 0 of 9
+[8e/363877] process > study_by_chrom (51)     [100%] 51 of 51, cached: 51
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (2)
+[01/e44a0c] process > chunk (1)               [  0%] 0 of 12
+[68/b7fb3a] process > study_by_chrom (72)     [100%] 72 of 72, cached: 72
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (3)
+[45/798d22] process > chunk (3)               [  0%] 0 of 17
+[c1/b23790] process > study_by_chrom (99)     [100%] 99 of 99, cached: 99
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (5)
+[a2/c62158] process > chunk (5)               [  0%] 0 of 21
+[e7/9511a6] process > study_by_chrom (118)    [100%] 118 of 118, cached: 118
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (7)
+[ba/af16e9] process > chunk (7)               [  0%] 0 of 23
+[c7/5c8d64] process > study_by_chrom (142)    [100%] 143 of 143, cached: 143
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (9)
+[e2/a63f60] process > chunk (9)               [  0%] 0 of 23
+[bb/dac3ad] process > study_by_chrom (171)    [100%] 171 of 171, cached: 171
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (10)
+[4b/77a72a] process > chunk (10)              [  0%] 0 of 23
+[64/359e86] process > study_by_chrom (205)    [100%] 205 of 205, cached: 205
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (12)
+[01/ba5081] process > chunk (12)              [  0%] 0 of 23
+[cb/a9e749] process > study_by_chrom (246)    [100%] 246 of 246, cached: 246
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (13)
+[90/39daed] process > chunk (13)              [  0%] 0 of 23
+[fa/4f0eae] process > study_by_chrom (276)    [100%] 276 of 276, cached: 276
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (15)
+[56/f74a94] process > chunk (15)              [  0%] 0 of 23
+[88/032e41] process > study_by_chrom (309)    [100%] 309 of 309, cached: 309
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (17)
+[f2/d5bf80] process > chunk (17)              [  0%] 0 of 23
+[17/c2c695] process > study_by_chrom (340)    [100%] 340 of 340, cached: 340
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (19)
+[99/0ae6fb] process > chunk (19)              [  0%] 0 of 23
+[c4/1f9022] process > study_by_chrom (376)    [100%] 376 of 376, cached: 376
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (21)
+[2b/378bf7] process > chunk (20)              [  0%] 0 of 23
+[fa/709f7e] process > study_by_chrom (419)    [100%] 420 of 420, cached: 420
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (23)
+[b2/532fcf] process > chunk (23)              [  0%] 0 of 23
+[6c/411661] process > study_by_chrom (453)    [100%] 453 of 453, cached: 453
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (23)
+[b2/532fcf] process > chunk (23)              [  0%] 0 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (23)
+[b2/532fcf] process > chunk (23)              [  0%] 0 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (23)
+[b2/532fcf] process > chunk (23)              [  0%] 0 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (23)
+[b2/532fcf] process > chunk (23)              [  0%] 0 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (23)
+[b2/532fcf] process > chunk (23)              [  0%] 0 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (23)
+[b2/532fcf] process > chunk (23)              [  0%] 0 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           -
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (23)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[-        ] process > impute_chunks           [  0%] 0 of 4
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (25)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[23/5e9740] process > impute_chunks (1)       [  0%] 0 of 66
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (27)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ca/31f7c6] process > impute_chunks (4)       [  0%] 0 of 111
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (28)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[fd/157127] process > impute_chunks (5)       [  0%] 0 of 160
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (30)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[5c/1d542b] process > impute_chunks (7)       [  0%] 0 of 210
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (32)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[2c/108c21] process > impute_chunks (9)       [  0%] 0 of 265
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (34)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[35/bc204b] process > impute_chunks (12)      [  0%] 0 of 337
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (36)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[37/63b6c2] process > impute_chunks (13)      [  0%] 0 of 400
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (38)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[b9/95dd7c] process > impute_chunks (15)      [  0%] 0 of 452
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (40)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[3f/e4b2f2] process > impute_chunks (17)      [  0%] 0 of 510
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (42)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[a7/26ae5e] process > impute_chunks (19)      [  0%] 0 of 579
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (48)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[b4/d0a766] process > impute_chunks (25)      [  0%] 0 of 580
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (53)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[cd/ca4339] process > impute_chunks (29)      [  0%] 0 of 580
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (58)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ad/e75c26] process > impute_chunks (35)      [  0%] 0 of 580
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (63)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[90/de3f2f] process > impute_chunks (40)      [  0%] 0 of 580
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (68)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[f7/2459c3] process > impute_chunks (45)      [  0%] 0 of 580
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (73)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[35/b82213] process > impute_chunks (50)      [  0%] 0 of 580
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (78)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[a1/5e4e0b] process > impute_chunks (55)      [  0%] 0 of 580
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (83)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[0b/af2f19] process > impute_chunks (59)      [  0%] 0 of 580
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (88)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[01/33dee1] process > impute_chunks (66)      [  0%] 0 of 580
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (93)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ad/ec500c] process > impute_chunks (70)      [  0%] 0 of 580
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (99)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[34/20651c] process > impute_chunks (74)      [  0%] 0 of 580
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (107)
+[e1/b6c267] process > chunk (21)              [  8%] 2 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[2b/599b15] process > impute_chunks (84)      [  0%] 0 of 580
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (108)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[4a/cc3c19] process > impute_chunks (86)      [  0%] 0 of 627
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (111)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[46/0fed25] process > impute_chunks (87)      [  0%] 0 of 702
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (112)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[a1/0bfcb5] process > impute_chunks (89)      [  0%] 0 of 789
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (114)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[4e/3a813b] process > impute_chunks (91)      [  0%] 0 of 903
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (116)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[52/5503d6] process > impute_chunks (93)      [  0%] 0 of 945
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (118)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[29/11c222] process > impute_chunks (94)      [  0%] 0 of 1035
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (121)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[54/509c61] process > impute_chunks (98)      [  0%] 0 of 1120
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (123)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[c4/f97f1e] process > impute_chunks (99)      [  0%] 0 of 1176
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (126)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[cd/4ccef9] process > impute_chunks (103)     [  0%] 0 of 1295
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (130)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[b7/481205] process > impute_chunks (105)     [  0%] 0 of 1320
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (135)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ec/3d8ab4] process > impute_chunks (112)     [  0%] 0 of 1320
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (140)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[b7/3559c0] process > impute_chunks (114)     [  0%] 0 of 1320
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (145)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[e0/025739] process > impute_chunks (122)     [  0%] 0 of 1320
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (153)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[91/43e400] process > impute_chunks (130)     [  0%] 0 of 1320
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (158)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[68/33db13] process > impute_chunks (135)     [  0%] 0 of 1320
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (163)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[78/b2cb33] process > impute_chunks (140)     [  0%] 0 of 1320
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (168)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[01/9edb52] process > impute_chunks (145)     [  0%] 0 of 1320
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (173)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ed/e0e8da] process > impute_chunks (151)     [  0%] 0 of 1320
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (179)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[84/36034d] process > impute_chunks (157)     [  0%] 0 of 1320
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (184)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[84/7c4ab0] process > impute_chunks (160)     [  0%] 0 of 1320
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (189)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[f1/bb621c] process > impute_chunks (165)     [  0%] 0 of 1320
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (197)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[3b/690078] process > impute_chunks (174)     [  0%] 0 of 1320
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (208)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[e1/dfb34d] process > impute_chunks (185)     [  0%] 0 of 1320
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (217)
+[a2/c62158] process > chunk (5)               [ 17%] 4 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[bb/c106d2] process > impute_chunks (194)     [  0%] 0 of 1347
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (218)
+[34/4756f4] process > chunk (14)              [ 34%] 8 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[6c/cd1c80] process > impute_chunks (195)     [  0%] 0 of 1411
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (219)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[b9/5f18a6] process > impute_chunks (196)     [  0%] 0 of 1481
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (221)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[22/9632ff] process > impute_chunks (198)     [  0%] 0 of 1570
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (224)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[7a/9eaca2] process > impute_chunks (200)     [  0%] 0 of 1661
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (227)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[b7/dff0c3] process > impute_chunks (204)     [  0%] 0 of 1784
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (229)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[35/0d4b33] process > impute_chunks (207)     [  0%] 0 of 1874
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (231)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[56/2bdfa3] process > impute_chunks (208)     [  0%] 0 of 1974
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (233)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[e0/2e6d18] process > impute_chunks (210)     [  0%] 0 of 2061
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (235)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[35/850873] process > impute_chunks (212)     [  0%] 0 of 2156
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (237)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[87/05efc6] process > impute_chunks (215)     [  0%] 0 of 2252
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (239)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[7e/95904b] process > impute_chunks (216)     [  0%] 0 of 2350
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (241)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[e9/42f352] process > impute_chunks (218)     [  0%] 0 of 2449
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (243)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[57/556d50] process > impute_chunks (220)     [  0%] 0 of 2555
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (245)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[e8/f8a233] process > impute_chunks (223)     [  0%] 0 of 2651
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (248)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[c2/ba08b2] process > impute_chunks (224)     [  0%] 0 of 2774
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (250)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[de/810813] process > impute_chunks (228)     [  0%] 0 of 2862
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (252)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[b0/8c98fe] process > impute_chunks (230)     [  0%] 0 of 2963
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (254)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[c3/562b8b] process > impute_chunks (231)     [  0%] 0 of 3064
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (258)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[df/9f9b77] process > impute_chunks (235)     [  0%] 0 of 3105
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (261)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[6b/37fbab] process > impute_chunks (239)     [  0%] 0 of 3253
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (263)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[bf/786253] process > impute_chunks (240)     [  0%] 0 of 3323
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (265)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[6c/756504] process > impute_chunks (242)     [  0%] 0 of 3414
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (267)
+[99/0ae6fb] process > chunk (19)              [ 43%] 10 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[75/5a797b] process > impute_chunks (244)     [  0%] 0 of 3508
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (269)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[46/5bd685] process > impute_chunks (247)     [  0%] 0 of 3571
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (273)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[f4/2b636c] process > impute_chunks (248)     [  0%] 0 of 3643
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (275)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[5d/06b962] process > impute_chunks (253)     [  0%] 0 of 3750
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (277)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[71/76ac95] process > impute_chunks (254)     [  0%] 0 of 3845
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (279)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[f3/f688a9] process > impute_chunks (257)     [  0%] 0 of 3937
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (283)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[80/47193d] process > impute_chunks (260)     [  0%] 0 of 3990
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (292)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[54/d85517] process > impute_chunks (268)     [  0%] 0 of 4012
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (294)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[40/49f349] process > impute_chunks (272)     [  0%] 0 of 4112
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (296)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[6d/0c9496] process > impute_chunks (274)     [  0%] 0 of 4217
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (298)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[84/45fd20] process > impute_chunks (275)     [  0%] 0 of 4320
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (300)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[b7/77724e] process > impute_chunks (277)     [  0%] 0 of 4428
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (310)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[f4/068ec5] process > impute_chunks (286)     [  0%] 0 of 4451
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (312)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[6c/58b0b2] process > impute_chunks (289)     [  0%] 0 of 4560
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (314)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[2c/e126c3] process > impute_chunks (290)     [  0%] 0 of 4677
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (316)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[db/4babac] process > impute_chunks (292)     [  0%] 0 of 4787
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (319)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[56/f0d1fe] process > impute_chunks (297)     [  0%] 0 of 4873
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (321)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[33/c052ca] process > impute_chunks (298)     [  0%] 0 of 4960
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (330)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[1c/d5df67] process > impute_chunks (307)     [  0%] 0 of 4960
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (344)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[93/2e15f0] process > impute_chunks (322)     [  0%] 0 of 4960
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (358)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[f8/5c86a2] process > impute_chunks (335)     [  0%] 0 of 4960
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (373)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[35/15bbd3] process > impute_chunks (350)     [  0%] 0 of 4960
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (384)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[34/6dc9e7] process > impute_chunks (362)     [  0%] 0 of 4960
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (394)
+[2d/2f070d] process > chunk (6)               [ 47%] 11 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[f6/9749d6] process > impute_chunks (372)     [  0%] 0 of 4960
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (396)
+[2b/378bf7] process > chunk (20)              [ 60%] 14 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[93/c818b4] process > impute_chunks (371)     [  0%] 0 of 5023
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (398)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[08/e90269] process > impute_chunks (375)     [  0%] 0 of 5116
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (400)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[46/5403e1] process > impute_chunks (378)     [  0%] 0 of 5225
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (402)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[8b/cf700c] process > impute_chunks (377)     [  0%] 0 of 5335
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (404)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[d1/f58800] process > impute_chunks (382)     [  0%] 0 of 5390
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (406)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[3d/08b102] process > impute_chunks (380)     [  0%] 0 of 5500
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (408)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[d7/20a82e] process > impute_chunks (385)     [  0%] 0 of 5617
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (412)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[a8/900f32] process > impute_chunks (388)     [  0%] 0 of 5727
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (414)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[3f/da1bb2] process > impute_chunks (391)     [  0%] 0 of 5832
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (417)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[e1/3e50f7] process > impute_chunks (394)     [  0%] 0 of 5942
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (419)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[a8/511c55] process > impute_chunks (396)     [  0%] 0 of 6057
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (422)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[98/664b7d] process > impute_chunks (399)     [  0%] 0 of 6120
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (425)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[cb/f6dbcb] process > impute_chunks (402)     [  0%] 0 of 6267
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (428)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[f2/e47843] process > impute_chunks (405)     [  0%] 0 of 6383
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (430)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[3e/9ab053] process > impute_chunks (407)     [  0%] 0 of 6490
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (432)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[d3/19a852] process > impute_chunks (408)     [  0%] 0 of 6564
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (433)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[b5/de0142] process > impute_chunks (411)     [  0%] 0 of 6685
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (436)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[7e/27ac70] process > impute_chunks (413)     [  0%] 0 of 6858
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (438)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[3d/f0e904] process > impute_chunks (414)     [  0%] 0 of 6969
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (440)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[f8/c023c4] process > impute_chunks (418)     [  0%] 0 of 7067
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (444)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[af/35726c] process > impute_chunks (421)     [  0%] 0 of 7156
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (447)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[cb/3a9e4e] process > impute_chunks (424)     [  0%] 0 of 7238
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (454)
+[b2/532fcf] process > chunk (23)              [ 65%] 15 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[3e/3262cb] process > impute_chunks (431)     [  0%] 0 of 7273
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (456)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[74/d62b34] process > impute_chunks (433)     [  0%] 0 of 7338
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (457)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[5f/d135c0] process > impute_chunks (434)     [  0%] 0 of 7433
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (458)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[1c/e2c95b] process > impute_chunks (435)     [  0%] 0 of 7523
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (460)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[3e/299541] process > impute_chunks (437)     [  0%] 0 of 7623
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (462)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[b8/d04ae2] process > impute_chunks (439)     [  0%] 0 of 7762
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (471)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[a4/05e030] process > impute_chunks (449)     [  0%] 0 of 7775
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (473)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[a4/743d40] process > impute_chunks (450)     [  0%] 0 of 7889
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (475)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[2e/d9b430] process > impute_chunks (453)     [  0%] 0 of 8001
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (479)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[1f/e845d6] process > impute_chunks (457)     [  0%] 0 of 8071
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (481)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[91/24fd24] process > impute_chunks (459)     [  0%] 0 of 8222
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (484)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[94/3887f5] process > impute_chunks (461)     [  0%] 0 of 8340
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (486)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[26/1bc8e9] process > impute_chunks (464)     [  0%] 0 of 8438
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (489)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[65/821297] process > impute_chunks (465)     [  0%] 0 of 8552
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (493)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[b0/d76d03] process > impute_chunks (469)     [  0%] 0 of 8572
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (495)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[02/54f0ea] process > impute_chunks (472)     [  0%] 0 of 8696
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (498)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[6d/7eb3ba] process > impute_chunks (475)     [  0%] 0 of 8787
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (500)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ce/136de2] process > impute_chunks (476)     [  0%] 0 of 8900
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (503)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[64/253f09] process > impute_chunks (481)     [  0%] 0 of 9004
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (510)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[62/7e7fbd] process > impute_chunks (487)     [  0%] 0 of 9067
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (513)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[4c/532f69] process > impute_chunks (489)     [  0%] 0 of 9160
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (515)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[af/cc790a] process > impute_chunks (492)     [  0%] 0 of 9275
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (518)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[6c/c90062] process > impute_chunks (495)     [  0%] 0 of 9376
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (520)
+[e3/57e081] process > chunk (16)              [ 78%] 18 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[a2/d378fd] process > impute_chunks (497)     [  0%] 0 of 9482
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (522)
+[63/168b18] process > chunk (8)               [ 82%] 19 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[c9/997d37] process > impute_chunks (499)     [  0%] 0 of 9595
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (525)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ce/cf28b8] process > impute_chunks (502)     [  0%] 0 of 9739
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (528)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[76/d6181c] process > impute_chunks (504)     [  0%] 0 of 9850
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (530)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[7f/c85d26] process > impute_chunks (507)     [  0%] 0 of 9958
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (534)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[fa/74f83b] process > impute_chunks (512)     [  0%] 0 of 10027
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (538)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[96/b9656d] process > impute_chunks (515)     [  0%] 0 of 10064
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (541)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[10/a1f073] process > impute_chunks (516)     [  0%] 0 of 10089
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (541)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[10/a1f073] process > impute_chunks (516)     [  0%] 0 of 10142
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (543)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ce/538079] process > impute_chunks (521)     [  0%] 0 of 10251
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (547)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[0f/a77175] process > impute_chunks (519)     [  0%] 0 of 10332
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (550)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[73/05c52f] process > impute_chunks (528)     [  0%] 0 of 10363
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (551)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[80/377e95] process > impute_chunks (526)     [  0%] 0 of 10470
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (553)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[bf/74703f] process > impute_chunks (529)     [  0%] 0 of 10586
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (556)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[cd/476733] process > impute_chunks (533)     [  0%] 0 of 10686
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (558)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[06/656a29] process > impute_chunks (535)     [  0%] 0 of 10803
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (571)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[0a/209753] process > impute_chunks (548)     [  0%] 0 of 10853
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (573)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[9f/86e56a] process > impute_chunks (549)     [  0%] 0 of 10958
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (575)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[df/71b90f] process > impute_chunks (552)     [  0%] 0 of 11074
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (578)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[20/7e04c7] process > impute_chunks (554)     [  0%] 0 of 11183
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (581)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[40/4ac713] process > impute_chunks (558)     [  0%] 0 of 11292
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (582)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[d8/4bb0f1] process > impute_chunks (559)     [  0%] 0 of 11394
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (585)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[45/22a07d] process > impute_chunks (562)     [  0%] 0 of 11505
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (588)
+[90/39daed] process > chunk (13)              [ 86%] 20 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[11/fed8cb] process > impute_chunks (565)     [  0%] 0 of 11615
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (590)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ae/deab92] process > impute_chunks (567)     [  0%] 0 of 11699
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (592)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[04/269e54] process > impute_chunks (569)     [  0%] 0 of 11803
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (595)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[39/1b962e] process > impute_chunks (572)     [  0%] 0 of 11961
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (597)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[d1/80aad7] process > impute_chunks (574)     [  0%] 0 of 12080
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (599)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[d1/9157b0] process > impute_chunks (576)     [  0%] 0 of 12201
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (601)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[e7/c06771] process > impute_chunks (578)     [  0%] 0 of 12329
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (602)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[c7/c68ec9] process > impute_chunks (579)     [  0%] 0 of 12462
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (605)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ce/553311] process > impute_chunks (581)     [  0%] 0 of 12607
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (608)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[20/c61eb5] process > impute_chunks (585)     [  0%] 0 of 12728
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (610)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[e7/ad4833] process > impute_chunks (587)     [  0%] 0 of 12838
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (613)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[d6/993cac] process > impute_chunks (588)     [  0%] 0 of 12953
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (615)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[e7/2818a7] process > impute_chunks (592)     [  0%] 0 of 13067
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (618)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[8c/183ef2] process > impute_chunks (596)     [  0%] 0 of 13222
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (620)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[62/a18ac0] process > impute_chunks (597)     [  0%] 0 of 13318
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (622)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[12/a338bd] process > impute_chunks (599)     [  0%] 0 of 13437
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (625)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[71/2895ac] process > impute_chunks (602)     [  0%] 0 of 13556
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (626)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[61/f9a687] process > impute_chunks (603)     [  0%] 0 of 13613
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (629)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[c8/178201] process > impute_chunks (606)     [  0%] 0 of 13811
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (631)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[37/4a9e0e] process > impute_chunks (608)     [  0%] 0 of 13934
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (634)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[a0/febf93] process > impute_chunks (610)     [  0%] 0 of 14048
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (636)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[fb/66083e] process > impute_chunks (613)     [  0%] 0 of 14156
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (640)
+[01/e44a0c] process > chunk (1)               [ 91%] 21 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ff/0f330c] process > impute_chunks (616)     [  0%] 0 of 14205
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (643)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[75/e85346] process > impute_chunks (621)     [  0%] 0 of 14404
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (646)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[63/3e1b7b] process > impute_chunks (623)     [  0%] 0 of 14523
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (648)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ba/a22e5f] process > impute_chunks (625)     [  0%] 0 of 14637
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (651)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[e6/dbc898] process > impute_chunks (628)     [  0%] 0 of 14756
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (653)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[21/20b9ef] process > impute_chunks (631)     [  0%] 0 of 14858
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (656)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[87/f595f1] process > impute_chunks (632)     [  0%] 0 of 15008
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (658)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[11/4d89bf] process > impute_chunks (635)     [  0%] 0 of 15100
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (659)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[3f/ee3991] process > impute_chunks (636)     [  0%] 0 of 15213
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (661)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[6c/e97cb8] process > impute_chunks (638)     [  0%] 0 of 15343
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (663)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[a1/19fb5d] process > impute_chunks (641)     [  0%] 0 of 15463
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (666)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[9b/87fa89] process > impute_chunks (643)     [  0%] 0 of 15560
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (667)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[80/06e25c] process > impute_chunks (644)     [  0%] 0 of 15680
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (669)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[fa/f77044] process > impute_chunks (646)     [  0%] 0 of 15809
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (671)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[fe/e7173f] process > impute_chunks (648)     [  0%] 0 of 15933
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (673)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[b9/29de02] process > impute_chunks (650)     [  0%] 0 of 16016
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (675)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[03/d4d8cc] process > impute_chunks (651)     [  0%] 0 of 16095
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (677)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[fa/873d95] process > impute_chunks (655)     [  0%] 0 of 16307
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (680)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[cc/ec57a7] process > impute_chunks (657)     [  0%] 0 of 16432
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (682)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[86/d0dd95] process > impute_chunks (659)     [  0%] 0 of 16579
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (684)
+[c4/34296a] process > chunk (22)              [ 95%] 22 of 23
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ff/16303d] process > impute_chunks (661)     [  0%] 0 of 16713
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (685)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[b5/359b47] process > impute_chunks (662)     [  0%] 0 of 16816
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (687)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[fc/31a528] process > impute_chunks (664)     [  0%] 0 of 16922
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (689)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[96/6ef3bb] process > impute_chunks (666)     [  0%] 0 of 17064
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (692)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[74/7fa844] process > impute_chunks (668)     [  0%] 0 of 17231
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (695)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[77/44f455] process > impute_chunks (672)     [  0%] 0 of 17345
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (697)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[a0/74315d] process > impute_chunks (675)     [  0%] 0 of 17454
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (700)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[1b/7aa626] process > impute_chunks (678)     [  0%] 0 of 17574
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (703)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[77/97b34f] process > impute_chunks (681)     [  0%] 0 of 17688
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (707)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[83/147ada] process > impute_chunks (684)     [  0%] 0 of 17824
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (709)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ea/f2ae23] process > impute_chunks (686)     [  0%] 0 of 17953
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (710)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[df/102f17] process > impute_chunks (687)     [  0%] 0 of 18042
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (713)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[7c/fb755a] process > impute_chunks (689)     [  0%] 0 of 18149
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (717)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[95/fd91c2] process > impute_chunks (694)     [  0%] 0 of 18222
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (720)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ee/6df01a] process > impute_chunks (697)     [  0%] 0 of 18350
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (722)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[f8/62d390] process > impute_chunks (699)     [  0%] 0 of 18453
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (724)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[1a/743daa] process > impute_chunks (701)     [  0%] 0 of 18580
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (729)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[3d/c31e2e] process > impute_chunks (705)     [  0%] 0 of 18669
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (733)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[83/5503f6] process > impute_chunks (710)     [  0%] 0 of 18763
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (736)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[c5/3441a2] process > impute_chunks (713)     [  0%] 0 of 18923
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (739)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[6f/cb7689] process > impute_chunks (716)     [  0%] 0 of 19022
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (749)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[91/12b134] process > impute_chunks (726)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (762)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[79/319c49] process > impute_chunks (739)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (769)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[6a/9db502] process > impute_chunks (747)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (784)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[be/0b1c50] process > impute_chunks (760)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (796)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[f4/30f064] process > impute_chunks (773)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (812)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[8d/8ba8dd] process > impute_chunks (789)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (827)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[96/c401dc] process > impute_chunks (805)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (843)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[43/38bda7] process > impute_chunks (820)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (859)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[ce/1364b8] process > impute_chunks (837)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (870)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[8f/4e94a0] process > impute_chunks (847)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (875)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[bf/208794] process > impute_chunks (853)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (890)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[85/0e3784] process > impute_chunks (867)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (904)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[e1/772b53] process > impute_chunks (881)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (919)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[14/d0aaf8] process > impute_chunks (897)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (930)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[2c/693dbf] process > impute_chunks (907)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (938)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[a2/91fa23] process > impute_chunks (915)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (953)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[f7/045e98] process > impute_chunks (930)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (966)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[d5/f23a4b] process > impute_chunks (943)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (982)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[92/f7ee4d] process > impute_chunks (959)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (997)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[6b/76b5d6] process > impute_chunks (974)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+
+executor >  slurm (999)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[41/3e0bf9] process > impute_chunks (976)     [  0%] 0 of 19040
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+Error executing process > 'impute_chunks (977)'
+
+Caused by:
+  Failed to submit process to grid scheduler for execution
+
+Command executed:
+
+  sbatch .command.run
+
+Command exit status:
+  1
+
+Command output:
+  sbatch: error: You have reached the rate limit of jobs submitted per hour. To avoid hitting this limit
+  sbatch: error: in the future, please use job arrays to submit large numbers of jobs instead.
+  sbatch: error: For more information: https://docs.ycrc.yale.edu/clusters-at-yale/job-scheduling/common-job-failures/#rate-limits
+  sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)
+
+Work dir:
+  /gpfs/ycga/home/fb343/git/glimpse_pipeline/work/c6/ca80b1ee74dc3f0b71439141e27323
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+
+
+WARN: Killing pending tasks (976)
+
+executor >  slurm (999)
+[f2/d5bf80] process > chunk (17)              [100%] 23 of 23 ✔
+[f8/0685d7] process > study_by_chrom (460)    [100%] 460 of 460, cached: 460 ✔
+[62/87db21] process > reference_by_chrom (21) [100%] 22 of 22, cached: 22 ✔
+[dc/777c4c] process > impute_chunks (192)     [  0%] 1 of 18849, failed: 1
+[-        ] process > ligate_chunks           -
+[-        ] process > concat_chroms           -
+Error executing process > 'impute_chunks (977)'
+
+Caused by:
+  Failed to submit process to grid scheduler for execution
+
+Command executed:
+
+  sbatch .command.run
+
+Command exit status:
+  1
+
+Command output:
+  sbatch: error: You have reached the rate limit of jobs submitted per hour. To avoid hitting this limit
+  sbatch: error: in the future, please use job arrays to submit large numbers of jobs instead.
+  sbatch: error: For more information: https://docs.ycrc.yale.edu/clusters-at-yale/job-scheduling/common-job-failures/#rate-limits
+  sbatch: error: Batch job submission failed: Job violates accounting/QOS policy (job submit limit, user's size and/or time limits)
+
+Work dir:
+  /gpfs/ycga/home/fb343/git/glimpse_pipeline/work/c6/ca80b1ee74dc3f0b71439141e27323
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+
+
+

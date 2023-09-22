@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../variant-calling-pipeline-gatk4"
+		}
+	],
+	"settings": {}
+}
