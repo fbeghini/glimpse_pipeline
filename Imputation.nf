@@ -5,21 +5,51 @@
 * VERSION: 2.0
 * YEAR: 2023
 */
+ref = file(params.referenceGenome)
 
-
-process chunk {
+process align {
 	cache "lenient"
 	executor "local"
 	cpus 1
 
 	input:
+		tuple val(pair_id), path(reads)
+
+	output:
+		tuple val(pair_id), path("${pair_id}_aligned_reads.bam"), path("${pair_id}_aligned_reads.bam.bai")
+	
+	publishDir "results/aligned_reads/", pattern: "*bam*", mode: "symlink"
+
+    script:
+    readGroup = \
+	"@RG\\tID:${pair_id}\\tLB:${pair_id}\\tPL:illumina\\tPM:novaseq\\tSM:${pair_id}"
+    """
+    zcat ${reads[0]} | head -n 40000 | bwa mem \
+	-K 100000000 \
+	-v 3 \
+	-t ${task.cpus} \
+	-Y \
+	-R \"${readGroup}\" \
+	$ref \
+	- | samtools view -Sb - | samtools sort --threads ${task.cpus} -O BAM -o ${pair_id}_aligned_reads.bam
+
+	samtools index -@ ${task.cpus} ${pair_id}_aligned_reads.bam
+    """
+
+}
+
+process chunk {
+	cache "lenient"
+	executor "local"
+
+	input:
 	tuple path(sites_vcf), path(sites_vcf_index)
 
 	output:
-	path("*.chunk.*.txt")
-	path("*.chunks.log")
-
-	publishDir "results/logs/chunk/", pattern: "*.chunks.log", mode: "copy"
+		tuple stdout, path("*.chunk.*.txt")
+		path("*.chunks.log")
+	
+	publishDir "results/logs/chunk/", pattern: "*.chunks.log", mode: "move"
 
 	"""
 	n_chrom=`bcftools index -s ${sites_vcf} | wc -l`
@@ -29,8 +59,9 @@ process chunk {
 	fi
 	chrom=`bcftools index -s ${sites_vcf} | cut -f1`
 
- 	${params.chunk_exec} --input ${sites_vcf} --region \${chrom} --window-size ${params.window_size} --buffer-size ${params.buffer_size} --output \${chrom}.chunks.txt > \${chrom}.chunks.log
+ 	${params.chunk_exec} --input ${sites_vcf} --region \${chrom} --sequential --map ${params.glimpse_maps}/\${chrom}.b[0-9]*.gmap.gz --output \${chrom}.chunks.txt --threads ${task.cpus} > \${chrom}.chunks.log
 	split -l 1 -d --additional-suffix=.txt \${chrom}.chunks.txt \${chrom}.chunk.
+	printf "\${chrom}"
 	"""	
 }
 
@@ -56,114 +87,43 @@ process reference_by_chrom {
 	"""
 }
 
-
-process reference_sites_by_chrom {
+process split_reference {
 	executor "local"
 	cpus 1
-
+	publishDir "results/split_reference" , pattern: "*.bin", mode: "copy"
 	input:
-	tuple path(vcf), path(vcf_index)
+		tuple val(chrom), path(chunk), path(ref_vcf), path(ref_vcf_index)
 
 	output:
-	tuple stdout, path(vcf), path(vcf_index)
+		tuple val(chrom), path("*bin")
 
 	"""
-	n_chrom=`bcftools index -s ${vcf} | wc -l`
-	if [[ \${n_chrom} -gt 1 ]]; then
-		echo "Multiple chromosomes within one reference panel VCF are not allowed." 1>&2
-		exit 1
-	fi
-	chrom=`bcftools index -s ${vcf} | cut -f1`
-	printf "\${chrom}"
+	IRG=`cut -f3 ${chunk}`
+	ORG=`cut -f4 ${chunk}`
+	GLIMPSE2_split_reference --threads ${task.cpus} -R ${ref_vcf} --map ${params.glimpse_maps}/${chrom}.b[0-9]*.gmap.gz --input-region \${IRG} --output-region \${ORG} -O bin
 	"""
 }
-
-
-process HaplotypeCaller {
-	//errorStrategy 'retry'
-	//maxRetries 3
-	cache "lenient"
-	cpus 1
-	memory "16 GB"
-	time "48h"
-	//scratch '$SLURM_TMPDIR'
-	//stageInMode "copy"
-
-	container "${params.gatkContainer}"
-	containerOptions "-B ${params.referenceDir}:/ref"
-
-	input:   
-	tuple path(bam), path(bam_index), val(chrom), path(sites_vcf), path(sites_vcf_index)
-
- 	output:
-	tuple val(chrom), path("${chrom}.${bam.getSimpleName()}.vcf.gz"), path("${chrom}.${bam.getSimpleName()}.vcf.gz.tbi")
-   
-	"""
-	gatk --java-options -Xmx14G HaplotypeCaller --native-pair-hmm-threads 1 -R /ref/${params.referenceGenome} -L ${sites_vcf} --alleles ${sites_vcf} -I ${bam} -O ${chrom}.${bam.getSimpleName()}.vcf.gz --output-mode EMIT_ALL_ACTIVE_SITES
-	"""
-}
-
-
-process join_per_sample_pls {
-	cache "lenient"
-	cpus 1
-	memory "8 GB"
-	time "12h"
-
-	input:
-	tuple val(chrom), path(vcfs), path(vcfs_indices)
-
-	output:
-	tuple val(chrom), path("${chrom}.pls.vcf.gz"), path("${chrom}.pls.vcf.gz.tbi")
-
-	"""
-	for f in ${vcfs}; do echo "\${f}"; done | sort  > files.txt
-	bcftools merge -i - -m none -l files.txt | bcftools annotate -x INFO | bcftools view -m2 -M2 -Oz -o ${chrom}.pls.vcf.gz
-	bcftools index -t ${chrom}.pls.vcf.gz
-	"""
-}
-
-
-process study_by_chrom {
-	executor "local"
-	cpus 1
-
-	input:
-	set file(vcf), file(vcf_index) from Channel.fromPath(params.study_vcf).map{ vcf -> [ vcf, vcf + ".tbi" ] }
-
-	output:
-	tuple stdout, file(vcf), file(vcf_index) into study
-
-	"""
-	tabix -l ${vcf} | tr "\n" ","
-	"""
-}
-
 
 process impute_chunks {
 	//errorStrategy "retry"
 	//maxRetries 3
 	cache "lenient"
-	cpus 1
-	memory "4 GB"
+	executor "local"
+	memory "12 GB"
 	time "12h"
 			
 	input:
-	tuple val(chrom), path(pls_vcf), path(pls_vcf_index), path(ref_vcf), path(ref_vcf_index), path(chunk)
+	tuple val(pair_id), path(bam), path(bam_index), val(chrom), path(bin)
 	
 	output:
-	tuple val(chrom), path("*.imputed.bcf")
+	tuple val(pair_id), val(chrom), path("*.imputed.bcf")
 	path("*.imputed.log")
 
-	publishDir "results/logs/impute/", pattern: "*.imputed.log", mode: "copy"
+	publishDir "results/logs/impute/", pattern: "*.imputed.log", mode: "move"
+	publishDir "results/imputed_chunks/", pattern: "*.imputed.bcf", mode: "symlink"
 	
 	"""
-	id=`head -n1 ${chunk} | cut -f1`
-	irg=`head -n1 ${chunk} | cut -f3`
-	org=`head -n1 ${chunk} | cut -f4`
-	chrom_no_prefix=`echo "${chrom}" | sed "s/chr//"`
-	
-	${params.phase_exec} --input ${pls_vcf} --reference ${ref_vcf} --map ${params.glimpse_maps}/chr\${chrom_no_prefix}.b[0-9]*.gmap.gz --input-region \${irg} --output-region \${org} --output ${chrom}.\${id}.imputed.bcf --log ${chrom}.\${id}.imputed.log
+	${params.phase_exec} --bam-file ${bam} --reference ${bin} --threads ${task.cpus} --output ${pair_id}.${bin.getBaseName()}.imputed.bcf --log ${pair_id}.${bin.getBaseName()}.imputed.log
 	"""
 }
 
@@ -172,40 +132,50 @@ process ligate_chunks {
 	//errorStrategy "retry"
 	//maxRetries 3
 	cache "lenient"
-	cpus 1
+	executor "local"
 	memory "4 GB"
 	time "12h"
 	
 	input:
-	tuple val(chrom), path(imputed_vcfs)
+		tuple val(pair_id), val(chrom), path(imputed_bcf), path(imputed_bcf_index)
 	
 	output:
-	tuple path("${chrom}.imputed.bcf"), path("${chrom}.imputed.bcf.csi")
-	path("${chrom}.ligate.log")
-
-	publishDir "results", pattern: "${chrom}.imputed.bcf*", mode: "copy"
-	publishDir "results/logs/ligate", pattern: "${chrom}.ligate.log", mode: "copy"
+		tuple val(pair_id), path("${pair_id}_${chrom}.imputed.bcf")
+		path("${pair_id}_${chrom}.imputed.bcf.csi")
 
 	"""
-	for f in ${imputed_vcfs}; do bcftools index \${f}; done
-	for f in ${imputed_vcfs}; do echo "\${f}"; done | sort -V > files_list.txt
-	${params.ligate_exec} --input files_list.txt --output ${chrom}.imputed.bcf --log ${chrom}.ligate.log
+	for f in ${imputed_bcf}; do echo "\${f}"; done | sort -V > files_list.txt
+	${params.ligate_exec} --input files_list.txt --output ${pair_id}_${chrom}.imputed.bcf --thread ${task.cpus}
 	"""
 }
 
+process merge_chrom_sample {
+	cache "lenient"
+	memory "4 GB"
+	
+	input:
+		tuple val(pair_id), path(imputed_bcf)
+	
+	output:
+		tuple val(pair_id), path('*.imputed.bcf*')
+
+	publishDir "results/imputed", pattern: "${pair_id}.imputed.bcf*", mode: "symlink"
+
+	"""
+	for f in ${imputed_bcf}; do echo "\${f}"; done | sort -V > files_list.txt
+	bcftools concat -f files.txt -Ob -o ${pair_id}.imputed.bcf
+	bcftools index ${pair_id}.imputed.bcf
+	"""
+}
 
 workflow {
-	chunks = chunk(Channel.fromPath(params.reference_sites_vcfs).map{ vcf -> [vcf, vcf + (vcf.getExtension() == "bcf" ? ".csi" : ".tbi")] })
-	
-	study_bams = Channel.fromPath(params.study_bams).map { file -> [file, file + (file.getExtension() == "bam" ? ".bai" : ".crai")] }
+	aligned_reads = align(Channel.fromFilePairs( params.reads, followLinks: true).take(1))
+	chunks = chunk(Channel.fromPath(params.reference_sites_vcfs).map{ vcf -> [vcf, vcf + (vcf.getExtension() == "bcf" ? ".csi" : ".csi")] }.filter(~/.*chr2[0-2].*/))
 	reference_vcfs = reference_by_chrom(Channel.fromPath(params.reference_vcfs).map{ file -> [file, file + (file.getExtension() == "bcf" ? ".csi" : ".tbi")] })
-	reference_sites_vcfs = reference_sites_by_chrom(Channel.fromPath(params.reference_sites_vcfs).map{ file -> [file, file + (file.getExtension() == "bcf" ? ".csi" : ".tbi")] }) 
+	bins = split_reference(chunks[0].take(2).transpose().combine(reference_vcfs, by: 0))
 
-
-	per_sample_pls = HaplotypeCaller(study_bams.combine(reference_sites_vcfs))
-	all_pls = join_per_sample_pls(per_sample_pls.groupTuple())
-
-	imputed_chunks = impute_chunks(all_pls.join(reference_vcfs).combine(chunks[0].flatten().map{ file -> [file.getSimpleName(), file] }, by: 0))
-
-	ligate_chunks(imputed_chunks[0].groupTuple())
+	imputed_chunks = impute_chunks(aligned_reads.combine(bins))
+	ligated_sample = ligate_chunks(imputed_chunks[0].map{pair_id, chr, imputed_bcf -> [pair_id, chr, imputed_bcf, imputed_bcf + ".csi"]}.groupTuple(by: [0,1]))
+	merged_chroms = merge_chrom_sample(ligated_sample[0].groupTuple())
 }
+
