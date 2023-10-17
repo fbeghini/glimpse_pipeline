@@ -9,7 +9,7 @@ ref = file(params.referenceGenome)
 
 process align {
 	cache "lenient"
-	executor "local"
+	// executor "local"
 	cpus 1
 
 	input:
@@ -24,6 +24,7 @@ process align {
     readGroup = \
 	"@RG\\tID:${pair_id}\\tLB:${pair_id}\\tPL:illumina\\tPM:novaseq\\tSM:${pair_id}"
     """
+	module load bwa SAMtools
     zcat ${reads[0]} | head -n 40000 | bwa mem \
 	-K 100000000 \
 	-v 3 \
@@ -40,7 +41,7 @@ process align {
 
 process chunk {
 	cache "lenient"
-	executor "local"
+	// executor "local"
 
 	input:
 	tuple path(sites_vcf), path(sites_vcf_index)
@@ -52,6 +53,7 @@ process chunk {
 	publishDir "results/logs/chunk/", pattern: "*.chunks.log", mode: "move"
 
 	"""
+	module load bcftools
 	n_chrom=`bcftools index -s ${sites_vcf} | wc -l`
 	if [[ \${n_chrom} -gt 1 ]]; then
 		echo "Multiple chromosomes within one reference panel VCF are not allowed." 1>&2
@@ -67,7 +69,7 @@ process chunk {
 
 
 process reference_by_chrom {
-	executor "local"
+	// executor "local"
 	cpus 1
 
 	input:
@@ -77,6 +79,7 @@ process reference_by_chrom {
 	tuple stdout, path(vcf), path(vcf_index)
 
 	"""
+	module load bcftools
 	n_chrom=`bcftools index -s ${vcf} | wc -l`
 	if [[ \${n_chrom} -gt 1 ]]; then
 		echo "Multiple chromosomes within one reference panel VCF are not allowed." 1>&2
@@ -88,7 +91,7 @@ process reference_by_chrom {
 }
 
 process split_reference {
-	executor "local"
+	// executor "local"
 	cpus 1
 	publishDir "results/split_reference" , pattern: "*.bin", mode: "copy"
 	input:
@@ -169,8 +172,8 @@ process merge_chrom_sample {
 }
 
 workflow {
-	aligned_reads = align(Channel.fromFilePairs( params.reads, followLinks: true).take(1))
-	chunks = chunk(Channel.fromPath(params.reference_sites_vcfs).map{ vcf -> [vcf, vcf + (vcf.getExtension() == "bcf" ? ".csi" : ".csi")] }.filter(~/.*chr2[0-2].*/))
+	aligned_reads = align(Channel.fromFilePairs( params.reads, followLinks: true))
+	chunks = chunk(Channel.fromPath(params.reference_sites_vcfs).map{ vcf -> [vcf, vcf + (vcf.getExtension() == "bcf" ? ".csi" : ".csi")] })
 	reference_vcfs = reference_by_chrom(Channel.fromPath(params.reference_vcfs).map{ file -> [file, file + (file.getExtension() == "bcf" ? ".csi" : ".tbi")] })
 	bins = split_reference(chunks[0].take(2).transpose().combine(reference_vcfs, by: 0))
 
