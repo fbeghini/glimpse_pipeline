@@ -9,6 +9,8 @@ ref = file(params.referenceGenome)
 
 process align {
 	cache "lenient"
+	module 'BWA/0.7.17-GCCcore-10.2.0'
+	module 'SAMtools/1.16-GCCcore-10.2.0'
 	// executor "local"
 	cpus 1
 
@@ -24,7 +26,6 @@ process align {
     readGroup = \
 	"@RG\\tID:${pair_id}\\tLB:${pair_id}\\tPL:illumina\\tPM:novaseq\\tSM:${pair_id}"
     """
-	module load bwa SAMtools
     zcat ${reads[0]} | head -n 40000 | bwa mem \
 	-K 100000000 \
 	-v 3 \
@@ -42,7 +43,7 @@ process align {
 process chunk {
 	cache "lenient"
 	// executor "local"
-
+	module 'BCFtools/1.16-GCCcore-10.2.0'
 	input:
 	tuple path(sites_vcf), path(sites_vcf_index)
 
@@ -53,7 +54,6 @@ process chunk {
 	publishDir "results/logs/chunk/", pattern: "*.chunks.log", mode: "move"
 
 	"""
-	module load bcftools
 	n_chrom=`bcftools index -s ${sites_vcf} | wc -l`
 	if [[ \${n_chrom} -gt 1 ]]; then
 		echo "Multiple chromosomes within one reference panel VCF are not allowed." 1>&2
@@ -71,7 +71,7 @@ process chunk {
 process reference_by_chrom {
 	// executor "local"
 	cpus 1
-
+	module 'BCFtools/1.16-GCCcore-10.2.0'
 	input:
 	tuple path(vcf), path(vcf_index)
 
@@ -79,7 +79,6 @@ process reference_by_chrom {
 	tuple stdout, path(vcf), path(vcf_index)
 
 	"""
-	module load bcftools
 	n_chrom=`bcftools index -s ${vcf} | wc -l`
 	if [[ \${n_chrom} -gt 1 ]]; then
 		echo "Multiple chromosomes within one reference panel VCF are not allowed." 1>&2
@@ -155,7 +154,7 @@ process ligate_chunks {
 process merge_chrom_sample {
 	cache "lenient"
 	memory "4 GB"
-	
+	module 'BCFtools/1.16-GCCcore-10.2.0'
 	input:
 		tuple val(pair_id), path(imputed_bcf)
 	
