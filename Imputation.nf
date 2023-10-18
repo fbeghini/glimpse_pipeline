@@ -12,7 +12,7 @@ process align {
 	module 'BWA/0.7.17-GCCcore-10.2.0'
 	module 'SAMtools/1.16-GCCcore-10.2.0'
 	// executor "local"
-	cpus 1
+	cpus 12
 
 	input:
 		tuple val(pair_id), path(reads)
