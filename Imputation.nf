@@ -26,7 +26,7 @@ process align {
     readGroup = \
 	"@RG\\tID:${pair_id}\\tLB:${pair_id}\\tPL:illumina\\tPM:novaseq\\tSM:${pair_id}"
     """
-    zcat ${reads[0]} | head -n 40000 | bwa mem \
+    zcat ${reads[0]} ${reads[1]} | bwa mem \
 	-K 100000000 \
 	-v 3 \
 	-t ${task.cpus} \
