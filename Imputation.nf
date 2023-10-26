@@ -8,7 +8,6 @@
 ref = file(params.referenceGenome)
 
 process align {
-	cache "lenient"
 	module 'BWA/0.7.17-GCCcore-10.2.0'
 	module 'SAMtools/1.16-GCCcore-10.2.0'
 	// executor "local"
@@ -20,7 +19,7 @@ process align {
 	output:
 		tuple val(pair_id), path("${pair_id}_aligned_reads.bam"), path("${pair_id}_aligned_reads.bam.bai")
 	
-	publishDir "results/aligned_reads/", pattern: "*bam*", mode: "symlink"
+	publishDir "${params.out}/results/aligned_reads/", pattern: "*bam*", mode: "symlink"
 
     script:
     readGroup = \
@@ -51,7 +50,7 @@ process chunk {
 		tuple stdout, path("*.chunk.*.txt")
 		path("*.chunks.log")
 	
-	publishDir "results/logs/chunk/", pattern: "*.chunks.log", mode: "move"
+	publishDir "${params.out}/results/logs/chunk/", pattern: "*.chunks.log", mode: "move"
 
 	"""
 	n_chrom=`bcftools index -s ${sites_vcf} | wc -l`
@@ -92,7 +91,7 @@ process reference_by_chrom {
 process split_reference {
 	// executor "local"
 	cpus 1
-	publishDir "results/split_reference" , pattern: "*.bin", mode: "copy"
+	publishDir "${params.out}/results/split_reference" , pattern: "*.bin", mode: "copy"
 	input:
 		tuple val(chrom), path(chunk), path(ref_vcf), path(ref_vcf_index)
 
@@ -161,7 +160,7 @@ process merge_chrom_sample {
 	output:
 		tuple val(pair_id), path('*.imputed.bcf*')
 
-	publishDir "results/imputed", pattern: "${pair_id}.imputed.bcf*", mode: "symlink"
+	publishDir "${params.out}/results/imputed", pattern: "${pair_id}.imputed.bcf*", mode: "symlink"
 
 	"""
 	for f in ${imputed_bcf}; do echo "\${f}"; done | sort -V > files_list.txt
