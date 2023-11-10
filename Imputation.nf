@@ -109,10 +109,10 @@ process impute_chunks {
 	//errorStrategy "retry"
 	//maxRetries 3
 	cache "lenient"
-	executor "local"
+	// executor "local"
 	memory "12 GB"
-	time "12h"
-			
+	time "1h"
+	
 	input:
 	tuple val(pair_id), path(bam), path(bam_index), val(chrom), path(bin)
 	
