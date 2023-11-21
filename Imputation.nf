@@ -176,8 +176,8 @@ process merge_chrom_sample {
 }
 
 workflow {
-	//aligned_reads = Channel.fromFilePairs( params.reads, followLinks: true) | align
-	aligned_reads = Channel.fromPath( params.study_bams, followLinks: true) | map { bam -> [bam.getBaseName(), bam, bam+".bai"]}
+	aligned_reads = Channel.fromFilePairs( params.reads, followLinks: true) | align
+	// aligned_reads = Channel.fromPath( params.study_bams, followLinks: true) | map { bam -> [bam.getBaseName(), bam, bam+".bai"]}
 	chunks = Channel.fromPath(params.reference_sites_vcfs) | map{ vcf -> [vcf, vcf + (vcf.getExtension() == "bcf" ? ".csi" : ".csi")] } | chunk
 	reference_vcfs = Channel.fromPath(params.reference_vcfs).map{ file -> [file, file + (file.getExtension() == "bcf" ? ".csi" : ".tbi")] } | reference_by_chrom
 	//chunks | transpose | flatten  | map { chr_chunk -> [chr_chunk.getSimpleName(), chr_chunk]} | combine(reference_vcfs, by: 0) | view
