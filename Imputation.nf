@@ -110,13 +110,13 @@ process split_reference {
 }
 
 process impute_chunks {
-	//errorStrategy "retry"
-	//maxRetries 3
+	errorStrategy "retry"
+	maxRetries 3
 	cache "lenient"
 	executor "slurm"
 	// executor "local" //DEBUG
 	module 'parallel/20210322-GCCcore-10.2.0'
-	memory "12 GB"
+	memory "60 GB"
 	time "24h"
 
 	input:
@@ -130,7 +130,8 @@ process impute_chunks {
 	publishDir "results/imputed_chunks/", pattern: "*.imputed.bcf", mode: "symlink"
 	
 	"""
-	${params.parallel} -j ${task.cpus} --trim rl ${params.phase_exec} --bam-file ${bam} --reference {} --threads 3 --output ${pair_id}.{}.imputed.bcf --log ${pair_id}.{}.imputed.log ::: ${bins}
+	c=$(expr ${task.cpus} / 2)
+	${params.parallel} -j $c --trim rl ${params.phase_exec} --bam-file ${bam} --reference {} --threads 2 --output ${pair_id}.{}.imputed.bcf --log ${pair_id}.{}.imputed.log ::: ${bins}
 	"""
 }
 
