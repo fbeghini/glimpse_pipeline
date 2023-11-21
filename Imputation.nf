@@ -131,7 +131,7 @@ process impute_chunks {
 	
 	"""
 	c=${task.cpus}
-	c=$(expr ${c} / 2)
+	c=expr ${c} / 2
 	${params.parallel} -j $c --trim rl ${params.phase_exec} --bam-file ${bam} --reference {} --threads 2 --output ${pair_id}.{}.imputed.bcf --log ${pair_id}.{}.imputed.log ::: ${bins}
 	"""
 }
