@@ -116,7 +116,7 @@ process impute_chunks {
 	executor "slurm"
 	// executor "local" //DEBUG
 	module 'parallel/20210322-GCCcore-10.2.0'
-	memory "60 GB"
+	memory { 25.GB * task.attempt }
 	time "24h"
 
 	input:
@@ -130,7 +130,7 @@ process impute_chunks {
 	publishDir "results/imputed_chunks/", pattern: "*.imputed.bcf", mode: "symlink"
 	
 	"""
-	${params.parallel} -j ${task.cpus} --trim rl ${params.phase_exec} --bam-file ${bam} --reference {} --threads 1 --output ${pair_id}.{}.imputed.bcf --log ${pair_id}.{}.imputed.log ::: ${bins}
+	${params.parallel} --resume -j ${task.cpus} --trim rl ${params.phase_exec} --bam-file ${bam} --reference {} --threads 1 --output ${pair_id}.{}.imputed.bcf --log ${pair_id}.{}.imputed.log ::: ${bins}
 	"""
 }
 
