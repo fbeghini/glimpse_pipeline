@@ -130,7 +130,7 @@ process impute_chunks {
 	publishDir "results/imputed_chunks/", pattern: "*.imputed.bcf", mode: "symlink"
 	
 	"""
-	${params.parallel} --resume -j ${task.cpus} --trim rl ${params.phase_exec} --bam-file ${bam} --reference {} --threads 1 --output ${pair_id}.{}.imputed.bcf --log ${pair_id}.{}.imputed.log ::: ${bins}
+	${params.parallel} --joblog log --resume-failed -j ${task.cpus} --trim rl ${params.phase_exec} --bam-file ${bam} --reference {} --threads 1 --output ${pair_id}.{}.imputed.bcf --log ${pair_id}.{}.imputed.log ::: ${bins}
 	"""
 }
 
