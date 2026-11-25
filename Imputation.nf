@@ -97,15 +97,15 @@ process reference_by_chrom {
 }
 
 process split_reference {
-	// executor "local" //DEBUG
-	// memory "5 GB" // DEBUG
+	executor "slurm"
+	memory "5 GB"
 	cpus 1
-	publishDir "${params.out}/results/split_reference" , pattern: "*.bin", mode: "copy"
+		storeDir "${params.out}/results/split_reference"
 	input:
 		tuple val(chrom), path(chunk), path(ref_vcf), path(ref_vcf_index)
 
 	output:
-		tuple val(chrom), path("*bin")
+		tuple val(chrom), path("${chunk.baseName}_*.bin")
 
 	"""
 	# split -l 1 -d --additional-suffix=.txt ${chunk} ${chrom}.chunk.
@@ -113,7 +113,7 @@ process split_reference {
 	do
 	IRG=`cut -f3 <<< \$line`
 	ORG=`cut -f4 <<< \$line`
-	GLIMPSE2_split_reference --threads ${task.cpus} -R ${ref_vcf} --map ${params.glimpse_maps}/${chrom}.b[0-9]*.gmap.gz --input-region \${IRG} --output-region \${ORG} -O bin
+	GLIMPSE2_split_reference --threads ${task.cpus} -R ${ref_vcf} --map ${params.glimpse_maps}/${chrom}.b[0-9]*.gmap.gz --input-region \${IRG} --output-region \${ORG} -O ${chunk.baseName}
 	done < ${chunk}
 	"""
 }
