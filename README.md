@@ -29,9 +29,7 @@ To run this pipline you will need:
 * `params.reference_vcfs` -- path to VCF/BCF files with phased reference panel genotypes. Each VCF/BCF file must have the corresponding tbi/csi index.
 * `params.reference_sites_vcfs` -- path to sites-only VCF/BCF files of the reference panel. Each VCF/BCF file must have the corresponding tbi/csi index.
 * `params.study_bams` -- path to BAM/CRAM files. One BAM/CRAM file per study participant. Each BAM/CRAM file must have the corresponding bai/crai index.
-* `params.referenceDir` -- path to the folder with the reference genome *.fa file.
 * `params.referenceGenome` -- name of the reference genome *.fa file (e.g. hs37d5.fa).
-* `params.gatkContainer` -- path to the GATK singularity image file (.sif).
 * `params.parabricksContainer` -- path to the Clara Parabricks singularity image file (.sif) used by the `align` step.
 * `params.gpus` -- number of GPUs per alignment task. Passed to `pbrun fq2bam --num-gpus` and requested from SLURM via `process.withName:'align'.clusterOptions`.
 * `params.markDuplicates` -- `true` (default) lets `fq2bam` mark duplicates and write a duplicate-metrics file; `false` adds `--no-markdups`, reproducing the previous BWA-MEM behaviour of leaving duplicates unmarked.
