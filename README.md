@@ -44,9 +44,8 @@ To run this pipline you will need:
 
 2. Run pipleine. Example of interactive SLURM job:
 ```
-salloc --time=12:00:00 --ntasks=1 --mem-per-cpu=16G
+salloc --time=1-0 -p day -cpus-per-task 10 --ntasks=1 --mem-per-cpu=16G
 module load nextflow
-module load singularity
 module load bcftools
 nextflow run Imputation.nf
 ```

@@ -25,7 +25,6 @@ process align {
 	publishDir "${params.out}/results/logs/align/", pattern: "*{_fq2bam.log,_duplicate_metrics.txt}", mode: "copy"
 
 	script:
-	def readGroup = "@RG\\tID:${pair_id}\\tLB:${pair_id}\\tPL:illumina\\tPM:novaseq\\tSM:${pair_id}"
 	def markdups  = params.markDuplicates ? "--out-duplicate-metrics ${pair_id}_duplicate_metrics.txt" : "--no-markdups"
 	def lowmem    = params.lowMemory ? "--low-memory" : ""
 	"""
