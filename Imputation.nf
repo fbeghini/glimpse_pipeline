@@ -8,35 +8,44 @@
 ref = file(params.referenceGenome)
 
 process align {
-	module 'BWA/0.7.17-GCCcore-10.2.0'
-	module 'SAMtools/1.16-GCCcore-10.2.0'
-	// executor "local"
-	cpus 12
+	cache "lenient"
+	executor "slurm"
 
 	input:
 		tuple val(pair_id), path(reads)
+		path(ref_fasta)
+		path(ref_index)
 
 	output:
 		tuple val(pair_id), path("${pair_id}_aligned_reads.bam"), path("${pair_id}_aligned_reads.bam.bai")
-	
+		path("${pair_id}_fq2bam.log")
+		path("${pair_id}_duplicate_metrics.txt") optional true
+
 	publishDir "${params.out}/results/aligned_reads/", pattern: "*bam*", mode: "symlink"
+	publishDir "${params.out}/results/logs/align/", pattern: "*{_fq2bam.log,_duplicate_metrics.txt}", mode: "copy"
 
-    script:
-    readGroup = \
-	"@RG\\tID:${pair_id}\\tLB:${pair_id}\\tPL:illumina\\tPM:novaseq\\tSM:${pair_id}"
-    """
-    zcat ${reads[0]} ${reads[1]} | bwa mem \
-	-K 100000000 \
-	-v 3 \
-	-t ${task.cpus} \
-	-Y \
-	-R \"${readGroup}\" \
-	$ref \
-	- | samtools view -Sb - | samtools sort --threads ${task.cpus} -O BAM -o ${pair_id}_aligned_reads.bam
+	script:
+	def readGroup = "@RG\\tID:${pair_id}\\tLB:${pair_id}\\tPL:illumina\\tPM:novaseq\\tSM:${pair_id}"
+	def markdups  = params.markDuplicates ? "--out-duplicate-metrics ${pair_id}_duplicate_metrics.txt" : "--no-markdups"
+	def lowmem    = params.lowMemory ? "--low-memory" : ""
+	"""
+	mkdir -p pbrun_tmp
 
-	samtools index -@ ${task.cpus} ${pair_id}_aligned_reads.bam
-    """
+	pbrun fq2bam \\
+		--ref ${ref_fasta} \\
+		--in-fq ${reads[0]} ${reads[1]} \"${readGroup}\" \\
+		--out-bam ${pair_id}_aligned_reads.bam \\
+		--bwa-options=\"-K 100000000 -Y\" \\
+		${markdups} ${lowmem} \\
+		--num-gpus ${params.gpus} \\
+		--tmp-dir pbrun_tmp \\
+		--logfile ${pair_id}_fq2bam.log
 
+	# fq2bam writes the BAM index itself; only index here if it somehow did not.
+	if [ ! -f ${pair_id}_aligned_reads.bam.bai ]; then
+		samtools index -@ ${task.cpus} ${pair_id}_aligned_reads.bam
+	fi
+	"""
 }
 
 process chunk {
@@ -176,7 +185,10 @@ process merge_chrom_sample {
 }
 
 workflow {
-	aligned_reads = Channel.fromFilePairs( params.reads, followLinks: true) | align
+	// Reference FASTA + its BWA/samtools index files are staged into the task dir so the
+	// Parabricks container can see them (fq2bam needs *.amb, *.ann, *.bwt, *.pac, *.sa, *.fai).
+	ref_index = Channel.fromPath("${params.referenceGenome}.{amb,ann,bwt,pac,sa,fai}", checkIfExists: true).collect()
+	aligned_reads = align(Channel.fromFilePairs( params.reads, followLinks: true), Channel.value(ref), ref_index)[0]
 	// aligned_reads = Channel.fromPath( params.study_bams, followLinks: true) | map { bam -> [bam.getBaseName(), bam, bam+".bai"]}
 	chunks = Channel.fromPath(params.reference_sites_vcfs) | map{ vcf -> [vcf, vcf + (vcf.getExtension() == "bcf" ? ".csi" : ".csi")] } | chunk
 	reference_vcfs = Channel.fromPath(params.reference_vcfs).map{ file -> [file, file + (file.getExtension() == "bcf" ? ".csi" : ".tbi")] } | reference_by_chrom
